@@ -1,1 +1,248 @@
-"<h> Spil3141 </h>" 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  @page {
+    size: A4;
+    margin: 13mm 14mm 15mm 14mm;
+    @bottom-center {
+      content: "콜먼 성필 · Coleman Seung Pil | Portfolio 2026 | " counter(page) " / " counter(pages);
+      font-family: "Noto Sans CJK KR";
+      font-size: 8pt;
+      color: #9aa6ad;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -weasy-hyphens: none; }
+  body {
+    font-family: "Noto Sans CJK KR", sans-serif;
+    color: #333a40;
+    font-size: 9.3pt;
+    line-height: 1.4;
+    margin: 0;
+  }
+  .navy { color: #11496b; }
+  .blue { color: #2f80a8; }
+  .gray { color: #8d99a1; }
+
+  /* Header */
+  .name { font-size: 22pt; font-weight: 700; color: #11496b; letter-spacing: -0.3px; }
+  .name .en { font-size: 15pt; font-weight: 400; color: #7f8c94; margin-left: 8px; letter-spacing: 0; }
+  .role { font-size: 12.5pt; font-weight: 700; color: #2f80a8; margin: 3px 0 7px 0; }
+  .summary-top { color: #6b7780; font-size: 9pt; line-height: 1.45; }
+  .contact { margin-top: 9px; font-size: 8.3pt; color: #8d99a1; white-space: nowrap; }
+  .contact b { color: #333a40; font-weight: 700; }
+  .contact .lbl { color: #9aa6ad; }
+  .contact .sep { display: inline-block; width: 13px; }
+  .contact .line2 { margin-top: 3px; }
+  .rule { border: none; border-top: 2px solid #cdd6dc; margin: 11px 0 4px 0; }
+
+  /* Section header */
+  .section { font-size: 12.5pt; font-weight: 700; color: #11496b; margin: 15px 0 9px 0; padding-left: 9px; border-left: 4px solid #2f80a8; line-height: 1.1; }
+  .section:first-of-type { margin-top: 12px; }
+  .sublabel { font-size: 9pt; font-weight: 700; color: #2f80a8; margin: 9px 0 5px 0; }
+  .sublabel:first-child { margin-top: 0; }
+
+  /* Skill chips */
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { border: 1px solid #dde7ee; background: #fff; border-radius: 20px; padding: 3px 12px; font-size: 8.6pt; color: #4a555c; white-space: nowrap; }
+
+  /* Project cards */
+  .proj { border: 1px solid #e4eaee; border-radius: 8px; padding: 9px 13px; margin-bottom: 8px; }
+  .proj.featured { background: #f2f8fb; border-color: #cfe0ec; }
+  .proj-head { position: relative; padding-right: 120px; }
+  .proj-title { font-size: 10.3pt; font-weight: 700; color: #16324a; line-height: 1.25; }
+  .proj-date { position: absolute; right: 0; top: 2px; font-size: 8.4pt; color: #98a4ab; font-weight: 400; }
+  .proj-meta { color: #3f88ae; font-size: 8.7pt; margin: 3px 0 5px 0; }
+  .proj-desc-kr { color: #414a51; font-size: 8.9pt; }
+  .proj-desc-en { color: #97a3aa; font-size: 8.7pt; }
+
+  /* Personal projects grid */
+  .grid { display: flex; flex-wrap: wrap; gap: 0 14px; }
+  .cell { width: calc(50% - 7px); border-bottom: 1px solid #e9eef1; padding: 8px 2px; }
+  .cell-title { font-weight: 700; color: #16324a; font-size: 9.4pt; }
+  .cell-sub { color: #8d99a1; font-size: 8.5pt; margin-top: 1px; }
+  .cell-link { color: #3f88ae; font-size: 8.4pt; margin-top: 2px; }
+  .nda { color: #a7b2b9; font-size: 8.3pt; margin-top: 12px; font-style: normal; }
+</style>
+</head>
+<body>
+
+  <div class="name">콜먼 성필<span class="en">Coleman Seung Pil</span></div>
+  <div class="role">Unity / XR / AI Integration Developer</div>
+  <div class="summary-top">
+    Unity, C# 기반 XR·VR 및 인터랙티브 콘텐츠 개발자. AI를 Unity 런타임에 통합하는 작업에 강점.<br>
+    Korea-based Unity/XR developer building interactive XR, VR and AI-integrated applications in C#.
+  </div>
+  <div class="contact">
+    <span class="lbl">이메일 · Email</span> <b>spil3141@naver.com</b><span class="sep"></span>
+    <span class="lbl">휴대폰 · Mobile</span> <b>010-6826-3161</b><span class="sep"></span>
+    <span class="lbl">GitHub</span> <b>github.com/spil3141</b><span class="sep"></span>
+    <span class="lbl">itch.io</span> <b>spil3141.itch.io</b>
+    <div class="line2"><span class="lbl">위치 · Location</span> <b>대전, 대한민국 · Daejeon, Korea</b></div>
+  </div>
+  <hr class="rule">
+
+  <div class="section">요약 · Summary</div>
+  <div class="summary-top" style="color:#414a51;">
+    한국에서 활동하는 소프트웨어 개발자입니다. 현재 케이쓰리아이(K3I) XR서비스개발팀 대리로 외부 고객사 XR·VR 교육/전시 콘텐츠, 사내 재사용 툴, 그리고 마스코트형 AI 챗봇을 개발하고 있습니다. 컴퓨터융합전자공학 석사이며, 딥러닝 모델을 Unity 런타임 추론으로 이식하는 AI-in-Unity 작업에 특히 강점이 있습니다.<br>
+    <span style="color:#97a3aa;">Software developer based in South Korea. Currently Assistant Manager on the XR Service Development Team at K3I, delivering XR/VR education and exhibit content for external clients, reusable internal tools, and a mascot AI chatbot. M.S. in Computer Convergence Electronic Engineering, with a particular strength in porting deep-learning models into Unity runtime inference.</span>
+  </div>
+
+  <div class="section">핵심 기술 · Core Skills</div>
+  <div class="sublabel">Unity · XR</div>
+  <div class="chips">
+    <span class="chip">Unity Engine</span><span class="chip">C#</span><span class="chip">XR / VR</span>
+    <span class="chip">Unity UI Toolkit</span><span class="chip">AI Navigation</span><span class="chip">Cinemachine</span>
+    <span class="chip">인터랙티브 전시 콘텐츠 · Interactive exhibits</span>
+    <span class="chip">멀티 디스플레이·터치 설치형 앱 · Multi-display / touch installs</span>
+  </div>
+  <div class="sublabel">AI · ML</div>
+  <div class="chips">
+    <span class="chip">TensorFlow</span><span class="chip">ONNX</span><span class="chip">Unity Sentis</span>
+    <span class="chip">Whisper STT</span><span class="chip">VAD</span><span class="chip">TTS</span>
+    <span class="chip">얼굴·사용자 감지 · Face / user detection</span>
+    <span class="chip">딥러닝 통합 · Deep-learning integration</span>
+  </div>
+  <div class="sublabel">언어 · 도구 · Languages &amp; Tools</div>
+  <div class="chips">
+    <span class="chip">C#</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">C</span>
+    <span class="chip">OpenGL</span><span class="chip">Git / GitHub</span><span class="chip">Visual Studio</span><span class="chip">Linux</span>
+  </div>
+
+  <div class="section">전문 프로젝트 · Professional Projects</div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">포항환경학교 전시 콘텐츠 · Pohang Environmental School exhibit content</span><span class="proj-date">2026.04 ~ 2026.06</span></div>
+    <div class="proj-meta">포항시 · Pohang City · Unity · C# · 인터랙티브 전시</div>
+    <div class="proj-desc-kr">미디어월·공원존 등 전시 콘텐츠 개발과 게임플레이 리워크·버그 수정을 수행.</div>
+    <div class="proj-desc-en">Exhibit content including a media wall and park zone, with gameplay rework and bug-fixing.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">킨더키노 Wonder Play 시리즈 3종 · Kinderkino "Wonder Play" series</span><span class="proj-date">2026.03 ~ 2026.04</span></div>
+    <div class="proj-meta">킨더키노 · Kinderkino · Unity · C#</div>
+    <div class="proj-desc-kr">Wonder Play 3종 개발: Launcher, Dog Run, Dino Run.</div>
+    <div class="proj-desc-en">Three titles built end to end: Launcher, Dog Run, and Dino Run.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">바이오화학 제조기사 자격증 실습 XR 콘텐츠 · Bio-chem certification XR content</span><span class="proj-date">2026.01 ~ 2026.03</span></div>
+    <div class="proj-meta">꿈드림공작소 · Kkumdream · Unity · C# · XR · PC / VR / Android / iOS</div>
+    <div class="proj-desc-kr">바이오화학 제조기사 자격증 실습 교육용 XR 콘텐츠. PC·HMD(VR)·모바일 멀티플랫폼 교육 앱.</div>
+    <div class="proj-desc-en">XR practical-training content for a bio-chemical manufacturing certification; multi-platform app (PC, HMD/VR, Android, iOS).</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">요리조리 퀴즈체험 인터랙티브 콘텐츠 · "Yori-Jori" quiz experience</span><span class="proj-date">2025.12 ~ 2026.01</span></div>
+    <div class="proj-meta">경상북도교육청 학교급식연구소 · Unity · C# · 응용 SW</div>
+    <div class="proj-desc-kr">학교급식 「요리조리」 퀴즈체험 인터랙티브 콘텐츠 개발.</div>
+    <div class="proj-desc-en">Interactive quiz-experience content for the school-meals research institute.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">멀티캠퍼스 XR 어학 학습 콘텐츠 · Multicampus XR language-learning content</span><span class="proj-date">2025.08 ~ 2025.12</span></div>
+    <div class="proj-meta">멀티캠퍼스 · Multicampus · Unity · C# · XR · 응용 SW</div>
+    <div class="proj-desc-kr">XR 기반 어학(외국어 학습) 콘텐츠 개발.</div>
+    <div class="proj-desc-en">XR-based language-learning content, developed as application software.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">K3i Chatbot — 사내 마스코트형 AI 챗봇 · Company Mascot AI Chatbot</span><span class="proj-date">2025.04 ~ 2025.05</span></div>
+    <div class="proj-meta">케이쓰리아이 (사내 · Internal) · 협업 Co-dev 50% · Unity · C# · STT · 사용자 감지</div>
+    <div class="proj-desc-kr">회사 마스코트형 AI 챗봇의 프로젝트 아키텍처 설계와 음성 인식(STT), 실시간 사용자 감지 등 핵심 기능을 개발·개선. 대표 AI-in-Unity 업무.</div>
+    <div class="proj-desc-en">Designed the project architecture and built core features, speech recognition (STT) and real-time user detection, for the company mascot AI chatbot. Flagship AI-in-Unity work.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">과학관 전시물 현대화 사업 · Science-museum exhibit modernization</span><span class="proj-date">2025.02 ~ 2025.04</span></div>
+    <div class="proj-meta">경상남도교육청 과학교육원 · 단독 Solo (100%) · Unity · C# · 인터랙티브 전시</div>
+    <div class="proj-desc-kr">전시물용 인터랙티브 콘텐츠를 기획·구현·테스트까지 단독으로 납품.</div>
+    <div class="proj-desc-en">Interactive exhibit content delivered end to end solo for an external client.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">이차전지 VR 교육·홍보 콘텐츠 · Secondary-battery VR education content</span><span class="proj-date">2024.10 ~ 2025.01</span></div>
+    <div class="proj-meta">충북대학교 산학협력단 · 단독 Solo (100%) · Unity · C# · VR</div>
+    <div class="proj-desc-kr">이차전지 VR 교육·홍보 콘텐츠를 단독 개발, 기능 구현 및 테스팅.</div>
+    <div class="proj-desc-en">Full solo delivery of secondary-battery VR education/promotional content for an external client.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">K3i Tools — 대화 시스템 (Dialogue System) · Unity Editor tool</span><span class="proj-date">2024.08 ~ 2024.10</span></div>
+    <div class="proj-meta">케이쓰리아이 (사내 · Internal) · 단독 Solo (100%) · Unity Editor · C# · 툴/자동화</div>
+    <div class="proj-desc-kr">XR/VR 프로젝트용 Unity 에디터 대화 시스템 및 자동화 툴을 단독 개발. 재사용 가능한 사내 자산.</div>
+    <div class="proj-desc-en">Solo-built Unity Editor dialogue-system and automation tooling for XR/VR projects. A reusable internal asset.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">아양뷰 New K2 홍보관 조성사업 · Daegu Ayang New-K2 promotion hall</span><span class="proj-date">2024.05 ~ 2024.08</span></div>
+    <div class="proj-meta">대구광역시 중구청 · 협업 Co-dev 50% · 시스템 SW</div>
+    <div class="proj-desc-kr">홍보관 전시 시스템 구현·연동 및 기술 진행.</div>
+    <div class="proj-desc-en">System SW development and technical execution for the promotion-hall exhibit system.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">레이저과정 교육 콘텐츠 · KOREATECH laser-course content</span><span class="proj-date">2023.12 ~ 2024.03</span></div>
+    <div class="proj-meta">한국기술교육대학교 · Unity · C#</div>
+    <div class="proj-desc-kr">레이저 과정 교육 콘텐츠 개발.</div>
+    <div class="proj-desc-en">Development of laser-course training content.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">메타 퀘스트 프로 디지털 트윈 · Meta Quest Pro digital twin</span><span class="proj-date">2023.09 ~ 2023.12</span></div>
+    <div class="proj-meta">LG전자 · LG Electronics · XR / 메타버스 · Meta Quest Pro</div>
+    <div class="proj-desc-kr">메타 퀘스트 프로 기반 XR/메타버스 신기술 융합 디지털 트윈 콘텐츠 개발.</div>
+    <div class="proj-desc-en">XR / metaverse new-technology convergence content for a Meta Quest Pro digital-twin project.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">3차원 공간정보활용시스템 재구축 · Suwon 3D spatial-information system</span><span class="proj-date">2023.07 ~ 2023.12</span></div>
+    <div class="proj-meta">경기도 수원시 · Suwon City · 3차원 공간정보 · 응용 SW</div>
+    <div class="proj-desc-kr">3차원 공간정보활용시스템 재구축.</div>
+    <div class="proj-desc-en">Rebuild of a 3D spatial-information utilization system.</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head"><span class="proj-title">Golf Putting Simulation (Exputt2) · 골프 퍼팅 시뮬레이터</span><span class="proj-date">2021.06 ~ 2023.05 · INVANT</span></div>
+    <div class="proj-meta">인반트 IT개발팀 · INVANT · Unity · C# · Android / iOS · Google Play 출시</div>
+    <div class="proj-desc-kr">골프 퍼팅 시뮬레이터의 포팅, 툴 개발, UI 기능 스크립팅. Google Play 정식 출시.</div>
+    <div class="proj-desc-en">Porting, tools development and UI functionality scripting for a golf-putting simulator, published on Google Play.</div>
+  </div>
+
+  <div class="section">개인 프로젝트 · 데모 · Personal Projects &amp; Demos</div>
+
+  <div class="sublabel">AI · 컴퓨터 비전 · AI &amp; Computer Vision</div>
+  <div class="grid">
+    <div class="cell"><div class="cell-title">웹캠·마이크 입력 AI 챗봇 · AI chatbot (webcam + mic)</div><div class="cell-sub">음성+영상 입력 파이프라인 · voice + vision input pipeline</div></div>
+    <div class="cell"><div class="cell-title">얼굴·음성 프로필 생성 시스템 · Face &amp; voice profiles</div><div class="cell-sub">얼굴·음성 프로필 등록 · face + voice enrollment</div></div>
+    <div class="cell"><div class="cell-title">딥러닝 사용자 식별 · User identification (DL)</div><div class="cell-sub">센서 입력으로 사용자 인식·식별 · recognise users from sensor input</div></div>
+    <div class="cell"><div class="cell-title">TensorFlow → Unity Sentis 파이프라인</div><div class="cell-sub">학습된 모델을 Unity 런타임 추론으로 이식 · port trained models to Unity</div></div>
+    <div class="cell"><div class="cell-title">Whisper STT + 커스텀 VAD · Custom VAD</div><div class="cell-sub">음성 구간 검출을 Whisper STT에 연결 · VAD feeding Whisper STT</div></div>
+    <div class="cell"><div class="cell-title">Face Pixelizer</div><div class="cell-sub">이미지 픽셀화 데스크톱 앱 · image-pixelation desktop app (Python, C/C++, TensorFlow, OpenGL)</div><div class="cell-link">github.com/spil3141/Face-Pixelizer</div></div>
+  </div>
+
+  <div class="sublabel">Unity 앱·툴 · Unity apps &amp; tools</div>
+  <div class="grid">
+    <div class="cell"><div class="cell-title">한국어 단어 플래시카드 앱 · Korean flashcard app</div><div class="cell-sub">Unity UI Toolkit</div></div>
+    <div class="cell"><div class="cell-title">터치 모니터 드래그 앱 · Touch-monitor drag app</div><div class="cell-sub">터치 인터랙션 설치형 앱 · touch installation app</div></div>
+    <div class="cell"><div class="cell-title">3D 전자저울 디스플레이 · 3D scale display</div><div class="cell-sub">3D 시각화 앱 · 3D visualization app</div></div>
+    <div class="cell"><div class="cell-title">클릭 이동 데모 · Click-to-move demo</div><div class="cell-sub">이동·내비게이션 데모 · movement &amp; navigation</div></div>
+    <div class="cell"><div class="cell-title">고생물학자 도구 받기 게임 · Tool-catching game</div><div class="cell-sub">소형 게임 · small game</div></div>
+    <div class="cell"><div class="cell-title">멀티 디스플레이·설치형 앱 · Multi-display installs</div><div class="cell-sub">멀티 모니터 설치 작품 · multi-monitor pieces</div></div>
+  </div>
+
+  <div class="sublabel">게임·데모 · Games &amp; demos</div>
+  <div class="grid">
+    <div class="cell"><div class="cell-title">After Life</div><div class="cell-sub">itch.io 게임잼 · game jam (Unity, C#)</div><div class="cell-link">spil3141.itch.io/game-jam-1</div></div>
+    <div class="cell"><div class="cell-title">Rewind Runner</div><div class="cell-sub">itch.io 게임잼 · game jam (Unity, C#)</div><div class="cell-link">spil3141.itch.io</div></div>
+    <div class="cell"><div class="cell-title">Tic-Tac-Toe (온라인 멀티플레이)</div><div class="cell-sub">커스텀 그래픽 엔진 · custom engine (C/C++, OpenGL)</div><div class="cell-link">github.com/spil3141/Tic_Tac_Toe</div></div>
+    <div class="cell"><div class="cell-title">Flappy Bird Clone</div><div class="cell-sub">커스텀 그래픽 엔진 · custom engine (C/C++, OpenGL, ImGui)</div><div class="cell-link">github.com/spil3141/FlappyBird_Clone</div></div>
+    <div class="cell"><div class="cell-title">Solar System Simulation 2D</div><div class="cell-sub">중력 시뮬레이션 데모 · gravity sim (C/C++, SFML)</div><div class="cell-link">github.com/spil3141/Solar-System-Simulation-2D</div></div>
+    <div class="cell"><div class="cell-title">Luck Duel 2.0</div><div class="cell-sub">카드 게임 · card game (C#, Unity)</div><div class="cell-link">github.com/spil3141/Luck-Duel-2.0</div></div>
+    <div class="cell"><div class="cell-title">Snake (console)</div><div class="cell-sub">콘솔 게임 · console game (C, Visual Studio)</div><div class="cell-link">github.com/spil3141/Snake</div></div>
+    <div class="cell"><div class="cell-title">Hanoi Tower (console)</div><div class="cell-sub">콘솔 구현 · console build (C, Visual Studio)</div><div class="cell-link">github.com/spil3141/Hanoi_Tower</div></div>
+  </div>
+
+  <div class="nda">일부 프로젝트는 비밀유지계약(NDA)에 따라 본 포트폴리오에서 제외되었습니다. · Some projects are omitted under NDA.</d
